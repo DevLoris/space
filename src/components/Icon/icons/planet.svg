@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1080 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Planete-" serif:id="Planete " transform="matrix(1,0,0,1,-21,0)">
+        <g transform="matrix(0.46634,0,0,0.46634,593.501,496.616)">
+            <circle cx="512.5" cy="560.5" r="408.5" style="fill:rgb(187,207,255);"/>
+        </g>
+        <path d="M662.512,918.016C614.697,937.665 562.354,948.5 507.5,948.5C282.043,948.5 99,765.457 99,540C99,314.543 282.043,131.5 507.5,131.5C732.912,131.5 915.927,314.47 916,539.897C890.055,529.949 861.909,524.5 832.5,524.5C703.628,524.5 599,629.128 599,758C599,819.897 623.136,876.202 662.512,918.016Z"/>
+    </g>
+</svg>

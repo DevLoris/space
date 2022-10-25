@@ -1,0 +1,22 @@
+{
+  "translation": {
+    "hello": "Bonjour {{name}} !",
+    "planet_list": {
+      "title": "Toutes les planètes",
+      "description": "Découvrez toutes les planètes, astres & météors découverts et recensés, et apprenez-en plus sur leur découverte, leur spécificité etc.",
+      "tags": "meteore, astre, planete, astéroide, météore",
+      "details": "View Details"
+    },
+    "components": {
+      "planet_list": {
+        "search_bar": "Rechercher",
+        "cell_type": "Type",
+        "cell_name": "Planète",
+        "cell_action": "Action",
+        "row": {
+          "button": "En savoir plus"
+        }
+      }
+    }
+  }
+}
