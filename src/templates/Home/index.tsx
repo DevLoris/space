@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import { Container } from '@material-ui/core'
-import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
 import PlanetList from '../../components/PlanetList/PlanetList'
@@ -22,10 +21,6 @@ const HomeTemplate: FC<HomeTemplateProps> = (props) => {
 
   return (
     <SC.Content>
-      <Helmet title={t('planet_list.title')}>
-        <meta name={'description'} content={t('planet_list.description')} />
-        <meta name={'tags'} content={t('planet_list.tags')} />
-      </Helmet>
       <Container maxWidth="sm">
         <GeneratedBreadcrumb
           items={[

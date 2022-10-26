@@ -7,6 +7,11 @@
       "tags": "meteore, astre, planete, astéroide, météore",
       "details": "View Details"
     },
+    "planet_details": {
+      "title": "En savoir plus sur {{name}}",
+      "description": "Découvrez plus de détails sur {{name}}, découverte par {{distance}} !",
+      "tags": "meteore, astre, planete, astéroide, météore"
+    },
     "components": {
       "planet_list": {
         "search_bar": "Rechercher",
@@ -15,6 +20,18 @@
         "cell_action": "Action",
         "row": {
           "button": "En savoir plus"
+        }
+      },
+      "details": {
+        "discover": {
+          "title": "Discovery",
+          "sentence": "{{name}} was discovered by {{discovery_name}} on {{discovery_date}}"
+        },
+        "near": {
+          "title": "Near to"
+        },
+        "moons": {
+          "title": "Moons"
         }
       }
     }

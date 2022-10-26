@@ -31,8 +31,6 @@ const PlanetMinilist: FC<PlanetMinilistTypes> = ({ planets, name }) => {
                 <PlanetTypeIcon planet={planet} />
               </ListItemIcon>
               <Link
-                title={'Voir le detail'}
-                aria-label={'Voir le detail'}
                 href={routesPath.planet.replace(':id', planet.id)}
               >
                 <ListItemText primary={planet.name} />

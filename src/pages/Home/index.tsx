@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 import { RouteComponentProps } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
+import { Helmet } from 'react-helmet-async'
 
 import HomeTemplate, { HomeTemplateProps } from '../../templates/Home'
 import { selectors } from '../../redux/app/redux'
@@ -19,7 +20,15 @@ const DashboardPage: React.FC<RouteComponentProps> = () => {
     [t, planets]
   )
 
-  return <HomeTemplate {...templateProps} />
+  return (
+    <>
+      <Helmet title={t('planet_list.title')}>
+        <meta name={'description'} content={t('planet_list.description')} />
+        <meta name={'tags'} content={t('planet_list.tags')} />
+      </Helmet>
+      <HomeTemplate {...templateProps} />
+    </>
+  )
 }
 
 export default DashboardPage
