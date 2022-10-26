@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core'
 
 import PlanetTypeIcon from '../PlanetTypeIcon/PlanetTypeIcon'
-import { routesPath } from '../../router'
+import { router, routesPath } from '../../router'
 
 import { PlanetMinilistTypes } from './PlanetMinilist.types'
 
@@ -19,7 +19,7 @@ const PlanetMinilist: FC<PlanetMinilistTypes> = ({ planets, name }) => {
   if (planets.length == 0) return <></>
 
   return (
-    <Card style={{ marginTop: '4rem' }}>
+    <Card style={{ marginTop: '2.4rem' }}>
       <CardContent style={{ paddingBottom: '0' }}>
         <Typography variant={'h4'} component={'h2'}>
           {name} ({planets.length})
@@ -30,9 +30,7 @@ const PlanetMinilist: FC<PlanetMinilistTypes> = ({ planets, name }) => {
               <ListItemIcon>
                 <PlanetTypeIcon planet={planet} />
               </ListItemIcon>
-              <Link
-                href={routesPath.planet.replace(':id', planet.id)}
-              >
+              <Link href={router(routesPath.planet, { id: planet.id })}>
                 <ListItemText primary={planet.name} />
               </Link>
             </ListItem>

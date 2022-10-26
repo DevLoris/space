@@ -52,8 +52,8 @@ const DetailsTemplate: FC<DetailsTemplateProps> = (props) => {
           planets={[aroundPlanet].filter((v) => v !== undefined)}
           name={t('components.details.near.title')}
         />
-        <Card style={{ marginTop: '4rem' }}>
-          <CardContent>
+        <Card style={{ marginTop: '2.4rem' }}>
+          <CardContent style={{ paddingBottom: '1.6rem' }}>
             <Typography variant={'h4'} component={'h2'}>
               {t('components.details.discover.title')}
             </Typography>

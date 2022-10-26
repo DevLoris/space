@@ -13,7 +13,7 @@ import SearchBar from 'material-ui-search-bar'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 
-import { routesPath } from '../../router'
+import { router, routesPath } from '../../router'
 import CustomButton from '../CustomButton/CustomButton'
 import { Planet } from '../../models/planet'
 import PlanetTypeIcon from '../PlanetTypeIcon/PlanetTypeIcon'
@@ -96,7 +96,7 @@ const PlanetListRow: FC<{ planet: Planet }> = ({ planet }) => {
         <Link
           title={t('components.planet_list.row.button')}
           aria-label={t('components.planet_list.row.button')}
-          href={routesPath.planet.replace(':id', planet.id)}
+          href={router(routesPath.planet, { id: planet.id })}
         >
           <CustomButton>{t('components.planet_list.row.button')}</CustomButton>
         </Link>
