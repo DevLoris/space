@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import {
   Link,
   Paper,
@@ -29,6 +29,11 @@ const PlanetList: FC<PlanetListProps> = ({ planets }) => {
   const { t } = useTranslation()
 
   const [rows, setRows] = useState<Planet[]>(planets)
+
+  // si le contenu du store est modifié
+  useEffect(() => {
+    setRows(planets)
+  }, [planets])
 
   // Filter for searching ; display only needed rows
   const doSearch = (searchedVal: string) => {

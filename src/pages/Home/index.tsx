@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import { RouteComponentProps } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { useSelector } from 'react-redux'
+import { shallowEqual, useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet-async'
 
 import HomeTemplate, { HomeTemplateProps } from '../../templates/Home'
@@ -10,7 +10,7 @@ import { selectors } from '../../redux/app/redux'
 const DashboardPage: React.FC<RouteComponentProps> = () => {
   const { t } = useTranslation()
 
-  const planets = useSelector(selectors.planets)
+  const planets = useSelector(selectors.planets, shallowEqual)
 
   const templateProps: HomeTemplateProps = useMemo(
     () => ({
