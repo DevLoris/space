@@ -21,6 +21,18 @@ const getTheme = () =>
     },
     shadows: [...shadows],
     overrides: {
+      MuiTooltip: {
+        tooltip: {
+          fontSize: '1.3rem',
+          backgroundColor: light.colors.pastelBlue,
+          color: light.colors.pureBlack,
+        },
+      },
+      MuiTableCell: {
+        root: {
+          fontSize: '1.3rem',
+        },
+      },
       MuiCssBaseline: {
         '@global': {
           '@font-face': Object.values(declarations).map((declaration) => {

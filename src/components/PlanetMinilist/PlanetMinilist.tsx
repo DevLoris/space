@@ -1,26 +1,18 @@
 import React, { FC } from 'react'
-import {
-  Card,
-  CardContent,
-  Link,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from '@material-ui/core'
+import { Link, List, ListItem, ListItemIcon, ListItemText, Typography } from '@material-ui/core'
 
 import PlanetTypeIcon from '../PlanetTypeIcon/PlanetTypeIcon'
 import { router, routesPath } from '../../router'
 
 import { PlanetMinilistTypes } from './PlanetMinilist.types'
+import { PlanetMinilistCard, PlanetMinilistCardContent } from './styled'
 
 const PlanetMinilist: FC<PlanetMinilistTypes> = ({ planets, name }) => {
   if (planets.length == 0) return <></>
 
   return (
-    <Card style={{ marginTop: '2.4rem' }}>
-      <CardContent style={{ paddingBottom: '0' }}>
+    <PlanetMinilistCard>
+      <PlanetMinilistCardContent>
         <Typography variant={'h4'} component={'h2'}>
           {name} ({planets.length})
         </Typography>
@@ -36,8 +28,8 @@ const PlanetMinilist: FC<PlanetMinilistTypes> = ({ planets, name }) => {
             </ListItem>
           ))}
         </List>
-      </CardContent>
-    </Card>
+      </PlanetMinilistCardContent>
+    </PlanetMinilistCard>
   )
 }
 

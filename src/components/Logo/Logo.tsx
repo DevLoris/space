@@ -1,11 +1,6 @@
 import React, { FC } from 'react'
-import styled from 'styled-components'
 
-const LogoHandler = styled('div')({
-  height: '8rem',
-  margin: '2rem -2rem',
-  display: 'flex',
-})
+import { LogoHandler } from './styled'
 
 const Logo: FC = () => (
   <LogoHandler>

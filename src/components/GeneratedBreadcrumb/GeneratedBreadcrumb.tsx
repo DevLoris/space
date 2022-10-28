@@ -2,21 +2,12 @@ import React, { FC } from 'react'
 import { Breadcrumbs, Link, Typography } from '@material-ui/core'
 import { BreadcrumbList } from 'schema-dts'
 import { JsonLd } from 'react-schemaorg'
-import styled from 'styled-components'
 
-import getTheme from '../../theme'
+import { BreadcrumbHandler } from './styled'
 
 interface GeneratedBreadcrumbProps {
   items: { name: string; url?: string }[]
 }
-
-const BreadcrumbHandler = styled('div')({
-  padding: '1rem 2rem',
-  background: getTheme().palette.background.paper,
-  borderRadius: '0.5rem',
-  boxShadow: getTheme().shadows[1],
-  margin: '2rem 0 4rem 0',
-})
 
 const GeneratedBreadcrumb: FC<GeneratedBreadcrumbProps> = ({ items }) => (
   <>

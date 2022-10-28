@@ -54,13 +54,13 @@ const DetailsTemplate: FC<DetailsTemplateProps> = (props) => {
         <CustomTitle>{planet.name}</CustomTitle>
         <ThumbImage src={`/static/assets/images/moon.png`} title={`Image de ${planet.name}`} />
         <DataGrid>
-          {planet.density && (
+          {planet.density != null && (
             <DataGridItem>
               <DataGridItemValue>{planet.density}</DataGridItemValue>
               <DataGridItemLabel>{t('components.details.label.density')}</DataGridItemLabel>
             </DataGridItem>
           )}
-          {planet.mass && (
+          {planet.mass != null && (
             <DataGridItem>
               <DataGridItemValue>
                 {planet.mass.massValue}
@@ -69,7 +69,7 @@ const DetailsTemplate: FC<DetailsTemplateProps> = (props) => {
               <DataGridItemLabel>{t('components.details.label.mass')}</DataGridItemLabel>
             </DataGridItem>
           )}
-          {planet.vol && (
+          {planet.vol != null && (
             <DataGridItem>
               <DataGridItemValue>
                 {planet.vol.volValue}
@@ -78,7 +78,7 @@ const DetailsTemplate: FC<DetailsTemplateProps> = (props) => {
               <DataGridItemLabel>{t('components.details.label.volume')}</DataGridItemLabel>
             </DataGridItem>
           )}
-          {planet.avgTemp && (
+          {planet.avgTemp != null && (
             <DataGridItem>
               <DataGridItemValue>{planet.avgTemp} °K</DataGridItemValue>
               <DataGridItemLabel>

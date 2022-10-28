@@ -1,14 +1,6 @@
 import React, { FC } from 'react'
-import styled from 'styled-components'
 
-const ImageHandler = styled('figure')({
-  margin: '0',
-  width: '100%',
-  '> img': {
-    width: '100%',
-    borderRadius: '1rem',
-  },
-})
+import { ImageHandler } from './styled'
 
 interface ThumbImageProps {
   src: string
