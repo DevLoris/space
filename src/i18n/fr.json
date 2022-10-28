@@ -31,7 +31,7 @@
         },
         "discover": {
           "title": "Découverte",
-          "sentence": "{{name}} a été découverte par {{discovery_name}} le {{discovery_date}}"
+          "sentence": "{{name}} a été découverte le {{discovery_date}}"
         },
         "near": {
           "title": "Proche de"

@@ -101,7 +101,6 @@ const DetailsTemplate: FC<DetailsTemplateProps> = (props) => {
               <Typography component={'p'}>
                 {t('components.details.discover.sentence', {
                   name: planet.name,
-                  discovery_by: planet.discoveredBy != '' ? planet.discoveredBy : '???',
                   discovery_date: planet.discoveryDate,
                 })}
               </Typography>
