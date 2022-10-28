@@ -6,4 +6,3 @@ export const homeArgs: DetailsTemplateProps = {
   title: 'Détails',
   planet: PlanetSample[0],
 }
-

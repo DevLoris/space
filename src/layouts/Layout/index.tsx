@@ -1,6 +1,9 @@
 import React, { FC } from 'react'
 import cx from 'classnames'
 
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
+
 import * as SC from './styled'
 
 export type LayoutProps = {
@@ -10,7 +13,7 @@ export type LayoutProps = {
 }
 
 const Layout: FC<LayoutProps> = (props) => {
-  const { children, className, header = null, footer = null } = props
+  const { children, className, header = <Header />, footer = <Footer /> } = props
 
   return (
     <SC.Container className={cx(className)}>

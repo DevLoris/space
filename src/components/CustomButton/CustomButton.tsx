@@ -3,16 +3,18 @@ import { Button, styled } from '@material-ui/core'
 import getTheme from '../../theme'
 
 const CustomButton = styled(Button)({
-  background: getTheme().palette.primary.main,
-  border: 0,
+  background: getTheme().palette.colors.pastelBlue,
   borderRadius: 3,
-  color: 'white',
-  height: 48,
-  padding: '0 30px',
+  color: 'black',
+  boxShadow: getTheme().shadows[1],
+  border: '1px solid black',
+  height: 40,
+  padding: '1rem',
   fontSize: '1.2rem',
+  lineHeight: '1.5rem',
   textTransform: 'none',
   '&:hover': {
-    background: getTheme().palette.primary.light,
+    background: getTheme().palette.colors.veryPastelBlue,
   },
 })
 

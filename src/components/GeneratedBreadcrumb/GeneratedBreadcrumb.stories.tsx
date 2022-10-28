@@ -1,13 +1,13 @@
 /* eslint-disable */
-import GeneratedBreadcrumb from './GeneratedBreadcrumb';
-import React from "react";
+import GeneratedBreadcrumb from './GeneratedBreadcrumb'
+import React from 'react'
 
 export default {
-  title: "GeneratedBreadcrumb",
-};
+  title: 'GeneratedBreadcrumb',
+}
 
-export const Default = () => <GeneratedBreadcrumb items={[]} />;
+export const Default = () => <GeneratedBreadcrumb items={[]} />
 
 Default.story = {
   name: 'default',
-};
+}

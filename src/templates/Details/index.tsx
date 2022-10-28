@@ -9,6 +9,12 @@ import GeneratedBreadcrumb from '../../components/GeneratedBreadcrumb/GeneratedB
 import ThumbImage from '../../components/ThumbImage/ThumbImage'
 import PlanetMinilist from '../../components/PlanetMinilist/PlanetMinilist'
 import { selectors } from '../../redux/app/redux'
+import {
+  DataGrid,
+  DataGridItem,
+  DataGridItemLabel,
+  DataGridItemValue,
+} from '../../pages/Details/styled'
 
 import * as SC from './styled'
 
@@ -47,25 +53,61 @@ const DetailsTemplate: FC<DetailsTemplateProps> = (props) => {
         />
         <CustomTitle>{planet.name}</CustomTitle>
         <ThumbImage src={`/static/assets/images/moon.png`} title={`Image de ${planet.name}`} />
+        <DataGrid>
+          {planet.density && (
+            <DataGridItem>
+              <DataGridItemValue>{planet.density}</DataGridItemValue>
+              <DataGridItemLabel>{t('components.details.label.density')}</DataGridItemLabel>
+            </DataGridItem>
+          )}
+          {planet.mass && (
+            <DataGridItem>
+              <DataGridItemValue>
+                {planet.mass.massValue}
+                <sup>{planet.mass.massExponent}</sup> kg
+              </DataGridItemValue>
+              <DataGridItemLabel>{t('components.details.label.mass')}</DataGridItemLabel>
+            </DataGridItem>
+          )}
+          {planet.vol && (
+            <DataGridItem>
+              <DataGridItemValue>
+                {planet.vol.volValue}
+                <sup>{planet.vol.volExponent}</sup> km<sup>3</sup>
+              </DataGridItemValue>
+              <DataGridItemLabel>{t('components.details.label.volume')}</DataGridItemLabel>
+            </DataGridItem>
+          )}
+          {planet.avgTemp && (
+            <DataGridItem>
+              <DataGridItemValue>{planet.avgTemp} °K</DataGridItemValue>
+              <DataGridItemLabel>
+                {t('components.details.label.average_temperature')}
+              </DataGridItemLabel>
+            </DataGridItem>
+          )}
+        </DataGrid>
         <PlanetMinilist planets={moons} name={t('components.details.moons.title')} />
         <PlanetMinilist
           planets={[aroundPlanet].filter((v) => v !== undefined)}
           name={t('components.details.near.title')}
         />
-        <Card style={{ marginTop: '2.4rem' }}>
-          <CardContent style={{ paddingBottom: '1.6rem' }}>
-            <Typography variant={'h4'} component={'h2'}>
-              {t('components.details.discover.title')}
-            </Typography>
-            <Typography component={'p'}>
-              {t('components.details.discover.sentence', {
-                name: planet.name,
-                discovery_by: planet.discoveredBy != '' ? planet.discoveredBy : '???',
-                discovery_date: planet.discoveryDate,
-              })}
-            </Typography>
-          </CardContent>
-        </Card>
+        {planet.discoveryDate && (
+          <Card style={{ marginTop: '2.4rem' }}>
+            <CardContent style={{ paddingBottom: '1.6rem' }}>
+              <Typography variant={'h4'} component={'h2'}>
+                {t('components.details.discover.title')}
+              </Typography>
+              <Typography component={'p'}>
+                {t('components.details.discover.sentence', {
+                  name: planet.name,
+                  discovery_by: planet.discoveredBy != '' ? planet.discoveredBy : '???',
+                  discovery_date: planet.discoveryDate,
+                })}
+              </Typography>
+            </CardContent>
+          </Card>
+        )}
       </Container>
     </SC.Content>
   )

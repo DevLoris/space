@@ -1,12 +1,12 @@
 /* eslint-disable */
-import CustomTitle from './CustomTitle';
+import CustomTitle from './CustomTitle'
 
 export default {
-  title: "CustomButton",
-};
+  title: 'CustomButton',
+}
 
-export const Default = () => <CustomTitle />;
+export const Default = () => <CustomTitle />
 
 Default.story = {
   name: 'default',
-};
+}

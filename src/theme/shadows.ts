@@ -9,7 +9,7 @@ function createShadow() {
 
 const shadows: Shadows = [
   'none',
-  `3px 3px 0 ${light.colors.freeSpeechBlue}`,
+  `0px 3px 0 ${light.colors.pureBlack}`,
   createShadow(),
   createShadow(),
   createShadow(),

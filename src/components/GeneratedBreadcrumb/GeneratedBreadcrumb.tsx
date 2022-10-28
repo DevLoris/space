@@ -12,7 +12,7 @@ interface GeneratedBreadcrumbProps {
 
 const BreadcrumbHandler = styled('div')({
   padding: '1rem 2rem',
-  background: getTheme().palette.background.default,
+  background: getTheme().palette.background.paper,
   borderRadius: '0.5rem',
   boxShadow: getTheme().shadows[1],
   margin: '2rem 0 4rem 0',

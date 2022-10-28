@@ -23,15 +23,21 @@
         }
       },
       "details": {
+        "label": {
+          "density": "Densité",
+          "average_temperature": "Température moyenne",
+          "mass": "Masse",
+          "volume": "Volume"
+        },
         "discover": {
-          "title": "Discovery",
-          "sentence": "{{name}} was discovered by {{discovery_name}} on {{discovery_date}}"
+          "title": "Découverte",
+          "sentence": "{{name}} a été découverte par {{discovery_name}} le {{discovery_date}}"
         },
         "near": {
-          "title": "Near to"
+          "title": "Proche de"
         },
         "moons": {
-          "title": "Moons"
+          "title": "Lunes"
         }
       }
     }

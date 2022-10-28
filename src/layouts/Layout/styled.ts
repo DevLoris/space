@@ -7,7 +7,7 @@ export const Container = styled(MuiContainer)`
   flex-flow: column;
   align-items: stretch;
   background: bottom center / cover no-repeat;
-  background-color: ${(props) => props.theme.palette.colors.whiteSmoke};
+  background-color: ${(props) => props.theme.palette.colors.veryPastelBlue};
   padding-left: 0;
   padding-right: 0;
   ${(props) => props.theme.breakpoints.up('md')} {

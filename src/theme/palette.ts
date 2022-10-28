@@ -20,6 +20,9 @@ const colors = {
   ghostWhite: '#F1F3FF',
   lightBlue: '#479DF1',
   echoBlue: '#A4A9C3',
+  pastelBlue: '#b0bbff',
+  veryPastelBlue: '#cbd2ff',
+  ultraPaselBlue: '#dde2ff',
 }
 
 export const light: PaletteOptions & { colors: typeof colors } = {
@@ -50,7 +53,7 @@ export const light: PaletteOptions & { colors: typeof colors } = {
   colors,
   divider: 'rgba(0, 0, 0, 0.12)',
   background: {
-    paper: '#fff',
+    paper: '#dde2ff',
     default: '#fff',
     level2: '#f5f5f5',
     level1: '#fff',

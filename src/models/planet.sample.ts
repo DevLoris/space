@@ -152,4 +152,3 @@ export const PlanetSample: Planet[] = [
     rel: 'https://api.le-systeme-solaire.net/rest/bodies/uranus',
   },
 ]
-

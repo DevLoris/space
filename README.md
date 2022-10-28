@@ -1,8 +1,18 @@
-# Boilerplate React JS / App
+# ✨ space ✨
+
+Un projet spatial ! Découvrez des informations sur les différentes planètes du système solaire ! 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses [Material UI](https://material-ui.com/)
 
-## Installation
+## ✨ A savoir
+- Utilisation des styled components (une grande première pour moi)
+- Design fait rapidement histoire de faire un peu d'inté vu qu'on est sur du front-end
+- Storybook non fonctionnel car pas setup
+- Utilisation du store pour sauvegarder
+- Il n'y a pas d'image par planète
+- Bases de SEO mises en place
+
+## ✨ Installation
 
 ### Copy .env file :
 
@@ -22,7 +32,7 @@ nvm use
 npm insall
 ```
 
-## Run project
+## ✨ Run project
 
 ### Start
 
@@ -37,16 +47,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Builds the app for production to the `build` folder.
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### Storybook
-
-`npm run storybook`
-
-
-# Exercice
-En se basant sur l'api https://api.le-systeme-solaire.net : 
-1. Afficher la liste des planettes du système solaire (image, nom).
-2. Avoir la possibilité de filtrer par un champs text sur le nom de la planette.
-3. Au clique afficher une page détail (avec une route) pour afficher les détailles de la planette. Libre à vous d'afficher ce que vous voulez.
-
-En option utiliser les composant material UI qui est déjà inclut dans le projet.
+ 

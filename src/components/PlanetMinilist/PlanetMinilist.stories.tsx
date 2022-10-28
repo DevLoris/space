@@ -1,12 +1,12 @@
 /* eslint-disable */
-import PlanetMinilist from './PlanetMinilist';
+import PlanetMinilist from './PlanetMinilist'
 
 export default {
-  title: "PlanetMinilist",
-};
+  title: 'PlanetMinilist',
+}
 
-export const Default = () => <PlanetMinilist name={"Nom de liste"} planets={[]} />;
+export const Default = () => <PlanetMinilist name={'Nom de liste'} planets={[]} />
 
 Default.story = {
   name: 'default',
-};
+}
