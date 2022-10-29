@@ -20,7 +20,6 @@ import * as SC from './styled'
 
 export type DetailsTemplateProps = {
   className?: string
-  title?: string
   planet: Planet
 }
 
