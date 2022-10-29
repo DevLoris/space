@@ -9,16 +9,18 @@ import { selectors } from '../../redux/app/redux'
 
 const DetailsPage: React.FC<RouteComponentProps> = () => {
   const { t } = useTranslation()
+
+  // get url params
   const { id } = useParams<{ id: string }>()
 
+  // load planet
   const planet = useSelector(selectors.planet(id))
 
   const templateProps: DetailsTemplateProps = useMemo(
     () => ({
-      title: t('hello', { name: 'Name' }),
       planet: planet,
     }),
-    [t, planet]
+    [planet]
   )
 
   // Let redirect if planet doesn't exist

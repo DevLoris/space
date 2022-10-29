@@ -43,7 +43,7 @@ const DetailsTemplate: FC<DetailsTemplateProps> = (props) => {
         <GeneratedBreadcrumb
           items={[
             {
-              name: 'Toutes les planètes',
+              name: t('planet_list.title'),
               url: '/',
             },
             {
@@ -56,7 +56,10 @@ const DetailsTemplate: FC<DetailsTemplateProps> = (props) => {
         <DataGrid>
           {planet.density != null && (
             <DataGridItem>
-              <DataGridItemValue>{planet.density}</DataGridItemValue>
+              <DataGridItemValue>
+                {planet.density} g.cm
+                <sup>3</sup>
+              </DataGridItemValue>
               <DataGridItemLabel>{t('components.details.label.density')}</DataGridItemLabel>
             </DataGridItem>
           )}
@@ -84,6 +87,12 @@ const DetailsTemplate: FC<DetailsTemplateProps> = (props) => {
               <DataGridItemLabel>
                 {t('components.details.label.average_temperature')}
               </DataGridItemLabel>
+            </DataGridItem>
+          )}
+          {planet.inclination != null && (
+            <DataGridItem>
+              <DataGridItemValue>{planet.inclination} °</DataGridItemValue>
+              <DataGridItemLabel>{t('components.details.label.inclination')}</DataGridItemLabel>
             </DataGridItem>
           )}
         </DataGrid>

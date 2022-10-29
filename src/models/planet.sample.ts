@@ -1,5 +1,8 @@
 import { Planet, PlanetBodyType } from './planet'
 
+/*
+ * Mock data (get on API)
+ */
 export const PlanetSample: Planet[] = [
   {
     id: 'uranus',

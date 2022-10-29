@@ -27,7 +27,8 @@
           "density": "Densité",
           "average_temperature": "Température moyenne",
           "mass": "Masse",
-          "volume": "Volume"
+          "volume": "Volume",
+          "inclination": "Inclinaison"
         },
         "discover": {
           "title": "Découverte",

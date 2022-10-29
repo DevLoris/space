@@ -7,17 +7,17 @@ import { Helmet } from 'react-helmet-async'
 import HomeTemplate, { HomeTemplateProps } from '../../templates/Home'
 import { selectors } from '../../redux/app/redux'
 
-const DashboardPage: React.FC<RouteComponentProps> = () => {
+const HomePage: React.FC<RouteComponentProps> = () => {
   const { t } = useTranslation()
 
+  // get all planets
   const planets = useSelector(selectors.planets, shallowEqual)
 
   const templateProps: HomeTemplateProps = useMemo(
     () => ({
-      title: t('hello', { name: 'Name' }),
       planets,
     }),
-    [t, planets]
+    [planets]
   )
 
   return (
@@ -31,4 +31,4 @@ const DashboardPage: React.FC<RouteComponentProps> = () => {
   )
 }
 
-export default DashboardPage
+export default HomePage
